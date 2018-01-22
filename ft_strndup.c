@@ -6,7 +6,7 @@
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 22:37:52 by hahmed            #+#    #+#             */
-/*   Updated: 2018/01/21 22:42:05 by hahmed           ###   ########.fr       */
+/*   Updated: 2018/01/21 23:04:13 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ char	*ft_strndup(const char *s, size_t len)
 		return (NULL);
 	ft_strncpy(d, s, len);
 	return (d);
+}
