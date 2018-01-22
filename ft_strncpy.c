@@ -6,7 +6,7 @@
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 17:56:39 by hahmed            #+#    #+#             */
-/*   Updated: 2017/10/05 10:39:13 by hahmed           ###   ########.fr       */
+/*   Updated: 2018/01/21 22:15:39 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,14 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 
 	i = 0;
 	tmp = dst;
-	while (src[i] && len > 0)
+	while (src[i] && i < len)
 	{
 		dst[i] = src[i];
-		len--;
 		i++;
 	}
-	while (len > 0)
+	while (i < len)
 	{
 		dst[i] = '\0';
-		len--;
 		i++;
 	}
 	return (tmp);
