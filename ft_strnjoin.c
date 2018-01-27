@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/19 17:30:49 by hahmed            #+#    #+#             */
-/*   Updated: 2018/01/26 10:10:30 by hahmed           ###   ########.fr       */
+/*   Created: 2018/01/27 09:13:24 by hahmed            #+#    #+#             */
+/*   Updated: 2018/01/27 09:14:33 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char		*ft_strnjoin(char const *s1, char const *s2, size_t n)
 {
-	char		*d;
+	char	*s;
 
-	if (!(d = ft_strnew(ft_strlen(s))))
+	if (!(s = ft_strnew(ft_strlen(s1) + n)))
 		return (NULL);
-	ft_strcpy(d, s);
-	return (d);
+	ft_strcpy(s, s1);
+	ft_strncat(s, s2, n);
+	return (s);
 }
