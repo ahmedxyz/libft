@@ -6,26 +6,11 @@
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 13:31:35 by hahmed            #+#    #+#             */
-/*   Updated: 2017/10/05 23:34:02 by hahmed           ###   ########.fr       */
+/*   Updated: 2018/03/31 18:02:50 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int		ft_digits(int n)
-{
-	int	digits;
-
-	digits = 0;
-	if (n < 0)
-		digits++;
-	while (n)
-	{
-		digits++;
-		n /= 10;
-	}
-	return (digits);
-}
 
 char			*ft_itoa(int n)
 {

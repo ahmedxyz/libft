@@ -6,7 +6,7 @@
 #    By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 16:35:26 by hahmed            #+#    #+#              #
-#    Updated: 2018/01/27 09:14:47 by hahmed           ###   ########.fr        #
+#    Updated: 2018/04/18 14:09:41 by hahmed           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,10 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	  ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_itoa.c ft_putchar.c \
 	  ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
-	  ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_strndup.c ft_strnjoin.c
+	  ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_strndup.c ft_strnjoin.c \
+	  ft_digits.c ft_digits_base.c ft_udigits_base.c ft_itoa_base.c \
+	  ft_uitoa_base.c ft_wcharlen.c ft_putwchar.c ft_wstrlen.c ft_putwstr.c \
+	  ft_max.c ft_min.c ft_putnchar.c ft_putnstr.c ft_putnwstr.c
 
 OBJ = $(SRC:.c=.o)
 

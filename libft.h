@@ -6,7 +6,7 @@
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:37:47 by hahmed            #+#    #+#             */
-/*   Updated: 2018/01/27 09:23:31 by hahmed           ###   ########.fr       */
+/*   Updated: 2018/04/18 14:09:29 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <wchar.h>
+# include <inttypes.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -88,5 +90,19 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 char				*ft_strndup(const char *s, size_t len);
 char				*ft_strnjoin(char const *s1, char const *s2, size_t n);
+int					ft_digits(int n);
+int					ft_digits_base(intmax_t n, int base);
+int					ft_udigits_base(uintmax_t n, int base);
+char				*ft_itoa_base(intmax_t n, int base);
+char				*ft_uitoa_base(uintmax_t n, int base);
+int					ft_wcharlen(wchar_t c);
+void				ft_putwchar(wchar_t c);
+size_t				ft_wstrlen(wchar_t *s);
+void				ft_putwstr(wchar_t *s);
+int					ft_max(int n1, int n2);
+int					ft_min(int n1, int n2);
+void				ft_putnchar(char c, int n);
+void				ft_putnstr(char *s, int n);
+void				ft_putnwstr(wchar_t *s, int n);
 
 #endif

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_digits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 15:47:17 by hahmed            #+#    #+#             */
-/*   Updated: 2018/04/20 01:58:24 by hahmed           ###   ########.fr       */
+/*   Created: 2018/03/31 18:00:20 by hahmed            #+#    #+#             */
+/*   Updated: 2018/03/31 18:44:46 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_digits(int n)
 {
-	size_t	i;
+	int	digits;
 
-	i = 0;
-	while (s[i])
+	digits = 0;
+	if (n <= 0)
+		digits++;
+	while (n)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
+		digits++;
+		n /= 10;
 	}
-	return (NULL);
+	return (digits);
 }

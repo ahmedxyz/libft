@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 15:47:17 by hahmed            #+#    #+#             */
-/*   Updated: 2018/04/20 01:58:24 by hahmed           ###   ########.fr       */
+/*   Created: 2018/04/03 20:58:08 by hahmed            #+#    #+#             */
+/*   Updated: 2018/04/04 16:33:23 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_uitoa_base(uintmax_t n, int base)
 {
-	size_t	i;
+	int		digits;
+	char	*new;
+	char	*symbols;
 
-	i = 0;
-	while (s[i])
+	if (base < 2 || 16 < base)
+		return (NULL);
+	digits = ft_udigits_base(n, base);
+	if (!(new = ft_strnew(digits)))
+		return (NULL);
+	new[digits] = '\0';
+	symbols = "0123456789abcdef";
+	if (n == 0)
+		new[0] = '0';
+	while (n)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
+		digits--;
+		new[digits] = symbols[n % base];
+		n /= base;
 	}
-	return (NULL);
+	return (new);
 }

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hahmed <hahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 15:47:17 by hahmed            #+#    #+#             */
-/*   Updated: 2018/04/20 01:58:24 by hahmed           ###   ########.fr       */
+/*   Created: 2018/04/04 20:20:32 by hahmed            #+#    #+#             */
+/*   Updated: 2018/04/04 20:22:15 by hahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t		ft_wstrlen(wchar_t *s)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (s[i])
+	len = 0;
+	while (*s)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
+		len += ft_wcharlen(*s);
+		s++;
 	}
-	return (NULL);
+	return (len);
 }
